@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Entity_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Type_of_Entity": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Sole Trader",
+        "Partnerships",
+        "Company",
+        "Not For Profit Organization",
+        "Self Managed Super Fund (SMSF)",
+        "Trusts",
+        "Register Business / Company"
+      ]
+    },
+    "Select_Services": {
+      "type": "enumeration",
+      "enum": [
+        "Accounting and Bookkeeping",
+        "Taxation",
+        "Advisory and Consultation"
+      ]
+    },
+    "Contact_Person": {
+      "type": "component",
+      "component": "shared.contact-person",
+      "repeatable": false
+    },
+    "BookingDateTime": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "information_to_collects",
+  "info": {
+    "singularName": "information-to-collect",
+    "pluralName": "information-to-collects",
+    "displayName": "Information _to_collect"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Full_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Phone_Number": {
+      "type": "string",
+      "required": true
+    },
+    "Email_Address": {
+      "type": "email",
+      "required": true
+    },
+    "Residential_Address": {
+      "type": "text",
+      "required": true
+    },
+    "TFN_Number": {
+      "type": "string"
+    },
+    "ABN_Number": {
+      "type": "string",
+      "required": false
+    },
+    "Type_of_Income": {
+      "type": "enumeration",
+      "enum": [
+        "Salary",
+        "Business Income",
+        "Freelancing",
+        "Investments",
+        "Rental Income",
+        "Capital Gains",
+        "Foreign Income",
+        "Other"
+      ]
+    },
+    "Additional_Comments": {
+      "type": "text"
+    }
+  }
+}

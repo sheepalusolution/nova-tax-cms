@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_contact_people",
+  "info": {
+    "displayName": "Contact"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone_number": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

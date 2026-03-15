@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "noEmitOnError": true,
     "noImplicitThis": true,
+    "sourceMap": true,
     "outDir": "dist",
     "rootDir": "."
   },

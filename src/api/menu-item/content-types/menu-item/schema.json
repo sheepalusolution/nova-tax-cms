@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_items",
+  "info": {
+    "singularName": "menu-item",
+    "pluralName": "menu-items",
+    "displayName": "menu-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "internal",
+        "external"
+      ]
+    },
+    "target": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "_self",
+        "_blank"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::menu.menu"
+    },
+    "isCta": {
+      "type": "boolean"
+    },
+    "ctaStyle": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "outline"
+      ]
+    },
+    "ctaPosition": {
+      "type": "enumeration",
+      "enum": [
+        "right",
+        "top"
+      ]
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "audience": {
+      "type": "enumeration",
+      "enum": [
+        "public",
+        "auth"
+      ]
+    },
+    "device": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "mobile",
+        "desktop"
+      ]
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::menu-item.menu-item",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::menu-item.menu-item",
+      "mappedBy": "parent"
+    }
+  }
+}
